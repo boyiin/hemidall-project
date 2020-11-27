@@ -7,9 +7,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 // parse application/json
 app.use(bodyParser.json())
-var port = process.env.port || 3100;
+var PORT = process.env.PORT || 3100;
 
-app.listen(port);
+app.listen(PORT);
 console.log("Server running on port 3100");
 
 app.post("/task1", (req, res, next) => {
