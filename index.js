@@ -8,9 +8,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
-app.listen(5000, () => {
- console.log("Server running on port 5000");
-});
+app.set('port', process.env.PORT || 3100);
+
 app.post("/task1", (req, res, next) => {
     // Input Validation on an object
     var data = req.body.data;
