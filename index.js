@@ -7,8 +7,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 // parse application/json
 app.use(bodyParser.json())
+var port = process.env.port || 3100;
 
-app.set('port', process.env.PORT || 3100);
+app.listen(port);
+console.log("Server running on port 3100");
 
 app.post("/task1", (req, res, next) => {
     // Input Validation on an object
